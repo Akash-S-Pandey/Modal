@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Modal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container" onclick="handleToggle()">
+        <button>Show Modal</button>
+    </div>
+    <div class="modal">
+        <div class="modal-overlay">
+
+        </div>
+        <div class="modal-box">
+            <div class="modal-title">
+                <h4>Modal Title</h4>
+                <button onclick="handleToggle()">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque temporibus expedita ad repudiandae sunt necessitatibus ullam. Pariatur iusto molestias qui animi deseruntlaudantium repellendus, ipsum obcaecati. Quod quae necessitatibus adipisci!
+            </div>
+            <div class="modal-footer">
+                <button onclick="handleToggle()">Ok</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        handleToggle = ()=>{
+            const el = document.querySelector('.modal')
+            console.log(el.style.display);
+            if(el.style.display==="" || el.style.display=='none'){
+                el.style.display='flex';
+            }else{
+                el.style.display='none';
+            };
+        };
+    </script>
+</body>
+
+</html>
